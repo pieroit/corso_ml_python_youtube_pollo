@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 y = np.random.random(size=100) * 10
 errors = (np.random.random(size=100) * 2) - 1
-#errors = y/2 + (np.random.random(size=100)*2 - 1)# sistematic error 1
-#errors = y/2 * (np.random.random(size=100)*2 - 1)# sistematic error 2
+errors = y/2 + (np.random.random(size=100)*2 - 1)# sistematic error 1
+#errors = y**2 * (np.random.random(size=100)*2 - 1)# sistematic error 2
 p = y + errors
 
 mse = mean_squared_error(y, p)

@@ -23,7 +23,7 @@ df.drop(columns_to_be_deleted, axis=1, inplace=True)
 transformers = [
     #['one_hot', OneHotEncoder(), ['weathersit']],
     ['scaler', QuantileTransformer(), ['temp', 'atemp', 'hum', 'windspeed']],
-    ['time_waver', OneHotEncoder(), ['season', 'yr', 'mnth', 'hr', 'weekday']],
+    ['time_waver', TimeTransformer(), ['season', 'yr', 'mnth', 'hr', 'weekday']],
 ]
 ct = ColumnTransformer(transformers, remainder='passthrough')
 X = ct.fit_transform(df)

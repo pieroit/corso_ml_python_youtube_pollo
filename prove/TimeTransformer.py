@@ -23,3 +23,4 @@ class TimeTransformer(BaseEstimator, TransformerMixin):
     def convert_to_rad(self, c):
 
         return (np.pi * 2) * (c / np.max(c))
+
