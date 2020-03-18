@@ -17,8 +17,7 @@ columns_to_be_deleted = ['cnt', 'casual', 'registered', 'dteday', 'instant']
 df.drop(columns_to_be_deleted, axis=1, inplace=True)
 
 transformers = [
-    ['one_hot', OneHotEncoder(), ['weathersit']],
-    ['time_trans', TimeTransformer(), ['season', 'yr', 'mnth', 'hr', 'weekday']],
+    ['one_hot', OneHotEncoder(), ['weathersit', 'season', 'yr', 'mnth', 'hr', 'weekday']],
     ['scaler', RobustScaler(), ['temp', 'atemp', 'hum', 'windspeed']]
 ]
 ct = ColumnTransformer(transformers, remainder='passthrough')
