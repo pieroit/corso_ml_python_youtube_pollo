@@ -33,3 +33,18 @@ class MyLinearRegression:
             sum += x_i * self.weights[i]
 
         return sum
+
+
+class MyLogisticRegression(MyLinearRegression):
+
+    def predict_one(self, record):
+        line = super().predict_one(record)
+        sigmoid = 1 / ( 1 + np.e**-line )
+
+        if sigmoid < 0.5:
+            return 0.0
+        else:
+            return 1.0
+
+
+
