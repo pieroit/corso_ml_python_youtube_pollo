@@ -3,6 +3,7 @@
 ## Streamlit
 
 - permette di costruire esperienze interattive in python
+- utilissimo per prototipi e mostrare rapidamente una demo ai non tecnici
  (incluso server web e frontend)
 - lo script viene rieseguito a daccapo ogni volta che qualcosa cambia nell'interfaccia
 - widget si utilizzano come variabili
